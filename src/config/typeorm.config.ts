@@ -1,7 +1,8 @@
 
 import {TypeOrmModuleOptions} from '@nestjs/typeorm'
 
-import "reflect-metadata"
+  import { Task } from 'src/tasks/task.entity'
+import { User } from 'src/auth/user.entity'
 
 export const typeOrmConfig: TypeOrmModuleOptions ={
 
@@ -11,7 +12,7 @@ export const typeOrmConfig: TypeOrmModuleOptions ={
   username:'postgres',
   password:'shirdisai',
   database:'taskmanagement',
-  entities:[__dirname +'/../**/*.entity{.ts,.js}'],
+  entities:[User,Task],
   synchronize:true,
   logging:false
 
