@@ -15,7 +15,7 @@ async signUp(authCredentialsDto:AuthCredentialsDto):Promise<void>{
 const {username,password} = authCredentialsDto
 
 
-const user=new User()
+const user=this.create()
 
 user.username =await username
 user.salt=await bcrypt.genSalt()
