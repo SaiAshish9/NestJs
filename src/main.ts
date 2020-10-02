@@ -17,7 +17,6 @@ async function bootstrap() {
  
 const port=process.env.PORT||serverConfig.port
 
-// yarn PORT=3001 start:dev
 
 await app.listen(port);
 logger.log(`application listening on ${port}`)
